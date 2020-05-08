@@ -4,6 +4,7 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <StartupObject>PS_37_Bzahov.Program</StartupObject>
+    <NoWin32Manifest>true</NoWin32Manifest>
   </PropertyGroup>
 
 </Project>

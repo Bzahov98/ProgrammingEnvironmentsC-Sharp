@@ -4,7 +4,6 @@ C:\Users\boboz\source\repos\PS_37_Bzahov\WPFhello\bin\Debug\netcoreapp3.1\WPFhel
 C:\Users\boboz\source\repos\PS_37_Bzahov\WPFhello\bin\Debug\netcoreapp3.1\WPFhello.runtimeconfig.dev.json
 C:\Users\boboz\source\repos\PS_37_Bzahov\WPFhello\bin\Debug\netcoreapp3.1\WPFhello.dll
 C:\Users\boboz\source\repos\PS_37_Bzahov\WPFhello\bin\Debug\netcoreapp3.1\WPFhello.pdb
-C:\Users\boboz\source\repos\PS_37_Bzahov\WPFhello\obj\Debug\netcoreapp3.1\WPFhello.csprojAssemblyReference.cache
 C:\Users\boboz\source\repos\PS_37_Bzahov\WPFhello\obj\Debug\netcoreapp3.1\MainWindow.g.cs
 C:\Users\boboz\source\repos\PS_37_Bzahov\WPFhello\obj\Debug\netcoreapp3.1\App.g.cs
 C:\Users\boboz\source\repos\PS_37_Bzahov\WPFhello\obj\Debug\netcoreapp3.1\WPFhello_MarkupCompile.cache
@@ -17,6 +16,5 @@ C:\Users\boboz\source\repos\PS_37_Bzahov\WPFhello\obj\Debug\netcoreapp3.1\WPFhel
 C:\Users\boboz\source\repos\PS_37_Bzahov\WPFhello\obj\Debug\netcoreapp3.1\WPFhello.dll
 C:\Users\boboz\source\repos\PS_37_Bzahov\WPFhello\obj\Debug\netcoreapp3.1\WPFhello.pdb
 C:\Users\boboz\source\repos\PS_37_Bzahov\WPFhello\obj\Debug\netcoreapp3.1\WPFhello.genruntimeconfig.cache
-C:\Users\boboz\source\repos\PS_37_Bzahov\WPFhello\obj\Debug\netcoreapp3.1\Window1.baml
 C:\Users\boboz\source\repos\PS_37_Bzahov\WPFhello\obj\Debug\netcoreapp3.1\MyMessage.g.cs
 C:\Users\boboz\source\repos\PS_37_Bzahov\WPFhello\obj\Debug\netcoreapp3.1\MyMessage.baml

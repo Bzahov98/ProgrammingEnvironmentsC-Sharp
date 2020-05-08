@@ -1,4 +1,3 @@
-C:\Users\boboz\source\repos\PS_37_Bzahov\PS_37_Bzahov\obj\Debug\netcoreapp3.1\PS_37_Bzahov.csprojAssemblyReference.cache
 C:\Users\boboz\source\repos\PS_37_Bzahov\PS_37_Bzahov\obj\Debug\netcoreapp3.1\PS_37_Bzahov.AssemblyInfoInputs.cache
 C:\Users\boboz\source\repos\PS_37_Bzahov\PS_37_Bzahov\obj\Debug\netcoreapp3.1\PS_37_Bzahov.AssemblyInfo.cs
 C:\Users\boboz\source\repos\PS_37_Bzahov\PS_37_Bzahov\bin\Debug\netcoreapp3.1\PS_37_Bzahov.exe
