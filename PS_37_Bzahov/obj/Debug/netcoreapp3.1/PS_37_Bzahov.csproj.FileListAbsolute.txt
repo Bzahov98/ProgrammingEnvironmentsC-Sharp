@@ -1,13 +1,13 @@
-C:\Users\boboz\source\repos\PS_37_Bzahov\PS_37_Bzahov\obj\Debug\netcoreapp3.1\PS_37_Bzahov.AssemblyInfoInputs.cache
-C:\Users\boboz\source\repos\PS_37_Bzahov\PS_37_Bzahov\obj\Debug\netcoreapp3.1\PS_37_Bzahov.AssemblyInfo.cs
 C:\Users\boboz\source\repos\PS_37_Bzahov\PS_37_Bzahov\bin\Debug\netcoreapp3.1\PS_37_Bzahov.exe
 C:\Users\boboz\source\repos\PS_37_Bzahov\PS_37_Bzahov\bin\Debug\netcoreapp3.1\PS_37_Bzahov.deps.json
 C:\Users\boboz\source\repos\PS_37_Bzahov\PS_37_Bzahov\bin\Debug\netcoreapp3.1\PS_37_Bzahov.runtimeconfig.json
 C:\Users\boboz\source\repos\PS_37_Bzahov\PS_37_Bzahov\bin\Debug\netcoreapp3.1\PS_37_Bzahov.runtimeconfig.dev.json
 C:\Users\boboz\source\repos\PS_37_Bzahov\PS_37_Bzahov\bin\Debug\netcoreapp3.1\PS_37_Bzahov.dll
 C:\Users\boboz\source\repos\PS_37_Bzahov\PS_37_Bzahov\bin\Debug\netcoreapp3.1\PS_37_Bzahov.pdb
+C:\Users\boboz\source\repos\PS_37_Bzahov\PS_37_Bzahov\obj\Debug\netcoreapp3.1\PS_37_Bzahov.csprojAssemblyReference.cache
+C:\Users\boboz\source\repos\PS_37_Bzahov\PS_37_Bzahov\obj\Debug\netcoreapp3.1\PS_37_Bzahov.csproj.CoreCompileInputs.cache
+C:\Users\boboz\source\repos\PS_37_Bzahov\PS_37_Bzahov\obj\Debug\netcoreapp3.1\PS_37_Bzahov.AssemblyInfoInputs.cache
+C:\Users\boboz\source\repos\PS_37_Bzahov\PS_37_Bzahov\obj\Debug\netcoreapp3.1\PS_37_Bzahov.AssemblyInfo.cs
 C:\Users\boboz\source\repos\PS_37_Bzahov\PS_37_Bzahov\obj\Debug\netcoreapp3.1\PS_37_Bzahov.dll
 C:\Users\boboz\source\repos\PS_37_Bzahov\PS_37_Bzahov\obj\Debug\netcoreapp3.1\PS_37_Bzahov.pdb
-C:\Users\boboz\source\repos\PS_37_Bzahov\PS_37_Bzahov\obj\Debug\netcoreapp3.1\PS_37_Bzahov.csproj.CoreCompileInputs.cache
 C:\Users\boboz\source\repos\PS_37_Bzahov\PS_37_Bzahov\obj\Debug\netcoreapp3.1\PS_37_Bzahov.genruntimeconfig.cache
-C:\Users\boboz\source\repos\PS_37_Bzahov\PS_37_Bzahov\obj\Debug\netcoreapp3.1\PS_37_Bzahov.csprojAssemblyReference.cache

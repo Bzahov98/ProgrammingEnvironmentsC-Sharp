@@ -14,9 +14,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPFhello", "WPFhello\WPFhello.csproj", "{F48C2FD7-9AD1-4188-8F16-FF5AF363E7D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyMVVM", "EasyMVVM\EasyMVVM.csproj", "{F0A8E620-FEAB-4E66-BCDB-7EFEFD6A5F15}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyMVVM", "EasyMVVM\EasyMVVM.csproj", "{F0A8E620-FEAB-4E66-BCDB-7EFEFD6A5F15}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfExample", "WpfExample\WpfExample.csproj", "{0F9BFD1E-FA94-4883-B470-7961B1758852}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfExample", "WpfExample\WpfExample.csproj", "{0F9BFD1E-FA94-4883-B470-7961B1758852}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentInfoSystemNew", "StudentInfoSystemNew\StudentInfoSystemNew.csproj", "{D07F4382-F7B0-428C-B6A2-383E01F89995}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,6 +46,10 @@ Global
 		{0F9BFD1E-FA94-4883-B470-7961B1758852}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F9BFD1E-FA94-4883-B470-7961B1758852}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F9BFD1E-FA94-4883-B470-7961B1758852}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D07F4382-F7B0-428C-B6A2-383E01F89995}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D07F4382-F7B0-428C-B6A2-383E01F89995}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D07F4382-F7B0-428C-B6A2-383E01F89995}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D07F4382-F7B0-428C-B6A2-383E01F89995}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

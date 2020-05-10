@@ -1,29 +1,40 @@
-﻿using System.Linq;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using StudentInfoSystem;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
 
-namespace WpfApp1
+namespace StudentInfoSystemNew
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
-        //MainWindowVM mwVM;
+        MainWindowVM mwVM;
         private string userFacultNumb;
         private Student currentStudent;
         //DEbug
-        public MainWindow( )
+        public MainWindow()
         {
-           /* string userFn = "123456";
-           */ InitializeComponent();
-           /* this.userFacultNumb = userFn;
-            this.currentStudent = null;
-            mwVM = new MainWindowVM();
-            this.DataContext = mwVM;
-            LoadUser();*/
-        } 
+            /* string userFn = "123456";
+            */
+            InitializeComponent();
+            /* this.userFacultNumb = userFn;
+             this.currentStudent = null;
+             mwVM = new MainWindowVM();
+             this.DataContext = mwVM;
+             LoadUser();*/
+        }
         /*public MainWindow( string userFn = "123456")
         {
             InitializeComponent();

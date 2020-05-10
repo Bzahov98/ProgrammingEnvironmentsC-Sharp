@@ -4,9 +4,13 @@ C:\Users\boboz\source\repos\PS_37_Bzahov\WpfExample\bin\Debug\netcoreapp3.1\WpfE
 C:\Users\boboz\source\repos\PS_37_Bzahov\WpfExample\bin\Debug\netcoreapp3.1\WpfExample.runtimeconfig.dev.json
 C:\Users\boboz\source\repos\PS_37_Bzahov\WpfExample\bin\Debug\netcoreapp3.1\WpfExample.dll
 C:\Users\boboz\source\repos\PS_37_Bzahov\WpfExample\bin\Debug\netcoreapp3.1\WpfExample.pdb
+C:\Users\boboz\source\repos\PS_37_Bzahov\WpfExample\obj\Debug\netcoreapp3.1\WpfExample.csprojAssemblyReference.cache
+C:\Users\boboz\source\repos\PS_37_Bzahov\WpfExample\obj\Debug\netcoreapp3.1\MainWindowView.g.cs
 C:\Users\boboz\source\repos\PS_37_Bzahov\WpfExample\obj\Debug\netcoreapp3.1\App.g.cs
+C:\Users\boboz\source\repos\PS_37_Bzahov\WpfExample\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
 C:\Users\boboz\source\repos\PS_37_Bzahov\WpfExample\obj\Debug\netcoreapp3.1\WpfExample_MarkupCompile.cache
 C:\Users\boboz\source\repos\PS_37_Bzahov\WpfExample\obj\Debug\netcoreapp3.1\WpfExample_MarkupCompile.lref
+C:\Users\boboz\source\repos\PS_37_Bzahov\WpfExample\obj\Debug\netcoreapp3.1\MainWindowView.baml
 C:\Users\boboz\source\repos\PS_37_Bzahov\WpfExample\obj\Debug\netcoreapp3.1\WpfExample.g.resources
 C:\Users\boboz\source\repos\PS_37_Bzahov\WpfExample\obj\Debug\netcoreapp3.1\WpfExample.csproj.CoreCompileInputs.cache
 C:\Users\boboz\source\repos\PS_37_Bzahov\WpfExample\obj\Debug\netcoreapp3.1\WpfExample.AssemblyInfoInputs.cache
@@ -14,7 +18,3 @@ C:\Users\boboz\source\repos\PS_37_Bzahov\WpfExample\obj\Debug\netcoreapp3.1\WpfE
 C:\Users\boboz\source\repos\PS_37_Bzahov\WpfExample\obj\Debug\netcoreapp3.1\WpfExample.dll
 C:\Users\boboz\source\repos\PS_37_Bzahov\WpfExample\obj\Debug\netcoreapp3.1\WpfExample.pdb
 C:\Users\boboz\source\repos\PS_37_Bzahov\WpfExample\obj\Debug\netcoreapp3.1\WpfExample.genruntimeconfig.cache
-C:\Users\boboz\source\repos\PS_37_Bzahov\WpfExample\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
-C:\Users\boboz\source\repos\PS_37_Bzahov\WpfExample\obj\Debug\netcoreapp3.1\MainWindowView.g.cs
-C:\Users\boboz\source\repos\PS_37_Bzahov\WpfExample\obj\Debug\netcoreapp3.1\MainWindowView.baml
-C:\Users\boboz\source\repos\PS_37_Bzahov\WpfExample\obj\Debug\netcoreapp3.1\WpfExample.csprojAssemblyReference.cache
