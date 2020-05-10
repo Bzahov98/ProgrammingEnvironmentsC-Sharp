@@ -10,18 +10,21 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
+        MainWindowVM mwVM;
         private string userFacultNumb;
         private Student currentStudent;
         //DEbug
         public MainWindow( )
         {
-            string userFn = "123456";
-            InitializeComponent();
-            this.userFacultNumb = userFn;
+           /* string userFn = "123456";
+           */ InitializeComponent();
+           /* this.userFacultNumb = userFn;
             this.currentStudent = null;
-            LoadUser();
+            mwVM = new MainWindowVM();
+            this.DataContext = mwVM;
+            LoadUser();*/
         } 
-        public MainWindow( string userFn = "123456")
+        /*public MainWindow( string userFn = "123456")
         {
             InitializeComponent();
             this.currentStudent = null;
@@ -31,10 +34,10 @@ namespace WpfApp1
         public MainWindow( Student student)
         {
             InitializeComponent();
-            this.currentStudent = student;
-            
-            LoadUser(currentStudent);
-        }
+            //mwVM = new MainWindowVM();
+            //mwVM.currentStudent = student;
+            //LoadUser(currentStudent); 
+        }*/
 
         private void LoadUser(Student student = null)
         {

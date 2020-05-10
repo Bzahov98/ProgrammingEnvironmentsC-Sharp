@@ -3,15 +3,18 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:WpfApp1"
+        xmlns:vm="clr-namespace:StudentInfoSystem"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-        <Grid Name="StudentGrid">
+    <Window.DataContext>
+        <vm:MainWindowVM/>
+    </Window.DataContext>
+        <Grid Name="StudentGrid" IsEnabled="{Binding isEnabled}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
-        <Image Width = "200" Source = "profileImg.png"  
+        <Image Width = "200" 
             VerticalAlignment = "Center" Margin = "30"/>
         <!-- top side -->
         <GroupBox Header="Лични данни" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="740" Height="150" VerticalAlignment="Top" Grid.Column="1">
@@ -25,12 +28,14 @@
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-                <Label x:Name="lblFirstName" HorizontalContentAlignment="Center" Content="Име:"  Grid.Column="0" Grid.Row="0" />
-                <TextBox  x:Name="txtFirstName" Width="295" Height="24" TextWrapping="Wrap" Grid.Column="1" Grid.Row="0"  TextChanged="TxtName_TextChanged" />
+                <Label x:Name="lblFirstName"  HorizontalContentAlignment="Center" Content="Име:"  Grid.Column="0" Grid.Row="0" />
+                <TextBox  x:Name="txtFirstName" Text="{Binding currentStudent.firstName }" Width="295" Height="24" TextWrapping="Wrap" Grid.Column="1" Grid.Row="0"  TextChanged="TxtName_TextChanged" />
+
                 <Label x:Name="lblSecondName" HorizontalContentAlignment="Center" Content="Презиме:"  Grid.Column="0" Grid.Row="1"/>
-                <TextBox  x:Name="txtSecondName" Width="295" Height="24" TextWrapping="Wrap" Grid.Column="1" Grid.Row="1"  TextChanged="TxtName_TextChanged" />
+                <TextBox  x:Name="txtSecondName"  Text="{Binding currentStudent.middleName}" Width="295" Height="24" TextWrapping="Wrap" Grid.Column="1" Grid.Row="1"  TextChanged="TxtName_TextChanged" />
+                
                 <Label x:Name="lblLastName" HorizontalContentAlignment="Center" Content="Фамилия:"  Grid.Column="0" Grid.Row="2" />
-                <TextBox  x:Name="txtLastName" Width="295" Height="24" TextWrapping="Wrap" Grid.Column="1" Grid.Row="2"  TextChanged="TxtName_TextChanged"/>
+                <TextBox  x:Name="txtLastName"  Text="{Binding currentStudent.lastName }" Width="295" Height="24" TextWrapping="Wrap" Grid.Column="1" Grid.Row="2"  TextChanged="TxtName_TextChanged"/>
             </Grid>
         </GroupBox>
         <!-- bot side -->
@@ -50,23 +55,29 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <Label x:Name="lblFaculty" HorizontalContentAlignment="Center" Content="Факултет:"  Grid.Column="0" Grid.Row="0"/>
-                <TextBox  x:Name="txtFaculty" Width="295" Height="24" TextWrapping="Wrap" Grid.Column="1" Grid.Row="0"  TextChanged="TxtName_TextChanged"/>
+                <TextBox  x:Name="txtFaculty" Text="{Binding currentStudent.faculity }" Width="295" Height="24" TextWrapping="Wrap" Grid.Column="1" Grid.Row="0"  TextChanged="TxtName_TextChanged"/>
+                
                 <Label x:Name="lblSpeciality" HorizontalContentAlignment="Center" Content="Специалност:" Grid.Column="0" Grid.Row="1"/>
-                <TextBox  x:Name="txtSpeciality" Width="295" Height="24" TextWrapping="Wrap" Grid.Column="1" Grid.Row="1"  TextChanged="TxtName_TextChanged"/>
+                <TextBox  x:Name="txtSpeciality" Text="{Binding currentStudent.specialty }" Width="295" Height="24" TextWrapping="Wrap" Grid.Column="1" Grid.Row="1"  TextChanged="TxtName_TextChanged"/>
+                
                 <Label x:Name="lblOks" HorizontalContentAlignment="Center" Content="ОКС:" Grid.Column="0" Grid.Row="2"/>
-                <TextBox  x:Name="txtLevel" Width="295" Height="24" TextWrapping="Wrap" Grid.Column="1" Grid.Row="2"  TextChanged="TxtName_TextChanged"/>
+                <TextBox  x:Name="txtLevel" Text="{Binding currentStudent.educationLevel }" Width="295" Height="24" TextWrapping="Wrap" Grid.Column="1" Grid.Row="2"  TextChanged="TxtName_TextChanged"/>
+                
                 <Label x:Name="lblStatus" HorizontalContentAlignment="Center" Content="Статус:" Grid.Column="0" Grid.Row="3"/>
-                <TextBox  x:Name="txtStatus" Width="295" Height="24" TextWrapping="Wrap" Grid.Column="1" Grid.Row="3"  TextChanged="TxtName_TextChanged"/>
+                <TextBox  x:Name="txtStatus" Text="{Binding currentStudent.educationStatus }" Width="295" Height="24" TextWrapping="Wrap" Grid.Column="1" Grid.Row="3"  TextChanged="TxtName_TextChanged"/>
+                
                 <Label x:Name="lblFacultyNumber" HorizontalContentAlignment="Center" Content="Фак. номер:" Grid.Column="0" Grid.Row="4"/>
-                <TextBox  x:Name="txtFacultyNumber" Width="295" Height="24" TextWrapping="Wrap" Grid.Column="1" Grid.Row="4"  TextChanged="TxtName_TextChanged"/>
+                <TextBox  x:Name="txtFacultyNumber" Text="{Binding currentStudent.faculityNumber }" Width="295" Height="24" TextWrapping="Wrap" Grid.Column="1" Grid.Row="4"  TextChanged="TxtName_TextChanged"/>
 
                 <!-- bot right side -->
                 <Label x:Name="lblCourse" HorizontalContentAlignment="Center" Content="Курс:"  Grid.Column="2" Grid.Row="0"/>
-                <TextBox  x:Name="txtCourse" Width="76" Height="24" TextWrapping="Wrap" Grid.Column="3" Grid.Row="0"  TextChanged="TxtName_TextChanged"/>
+                <TextBox  x:Name="txtCourse" Text="{Binding currentStudent.educationCource }" Width="76" Height="24" TextWrapping="Wrap" Grid.Column="3" Grid.Row="0"  TextChanged="TxtName_TextChanged"/>
+                
                 <Label x:Name="lblStream" HorizontalContentAlignment="Center" Content="Поток:" Grid.Column="2" Grid.Row="1"/>
-                <TextBox  x:Name="txtStream" Width="76" Height="24" TextWrapping="Wrap" Grid.Column="3" Grid.Row="1"  TextChanged="TxtName_TextChanged"/> 
+                <TextBox  x:Name="txtStream" Text="{Binding currentStudent.stream }" Width="76" Height="24" TextWrapping="Wrap" Grid.Column="3" Grid.Row="1"  TextChanged="TxtName_TextChanged"/> 
+                
                 <Label x:Name="lblGroup" HorizontalContentAlignment="Center" Content="Група:" Grid.Column="2" Grid.Row="2"/>
-                <TextBox  x:Name="txtGroup" Width="76" Height="24" TextWrapping="Wrap" Grid.Column="3" Grid.Row="2"  TextChanged="TxtName_TextChanged"/>
+                <TextBox  x:Name="txtGroup" Text="{Binding currentStudent.group }" Width="76" Height="24" TextWrapping="Wrap" Grid.Column="3" Grid.Row="2"  TextChanged="TxtName_TextChanged"/>
 
                 <Button Content="Изчисти данните" Name="btnClear" HorizontalAlignment="Center"  Grid.Column="3" Grid.Row="3"  Click="BtnClear_Click"/>
                 <Button Content="Зареди студент" Name="btnLoadStudent" HorizontalAlignment="Center" Grid.Column="3" Grid.Row="4" Click="BtnLoadStudent_Click"/>

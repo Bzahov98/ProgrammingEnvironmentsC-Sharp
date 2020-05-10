@@ -53,7 +53,10 @@ namespace StudentInfoSystem
                 return;
             }
 
-            MainWindow mainForm = new MainWindow(getUserFromData(user.FacNumber));
+            //MainWindow mainForm = new MainWindow(getUserFromData(user.FacNumber));
+            
+            MainWindowVM.studentFromLogin = getUserFromData(user.FacNumber);
+            MainWindow mainForm = new MainWindow();
             mainForm.Show();
             this.Close();
         }

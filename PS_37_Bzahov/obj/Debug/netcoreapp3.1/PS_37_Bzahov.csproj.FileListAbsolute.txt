@@ -10,3 +10,4 @@ C:\Users\boboz\source\repos\PS_37_Bzahov\PS_37_Bzahov\obj\Debug\netcoreapp3.1\PS
 C:\Users\boboz\source\repos\PS_37_Bzahov\PS_37_Bzahov\obj\Debug\netcoreapp3.1\PS_37_Bzahov.pdb
 C:\Users\boboz\source\repos\PS_37_Bzahov\PS_37_Bzahov\obj\Debug\netcoreapp3.1\PS_37_Bzahov.csproj.CoreCompileInputs.cache
 C:\Users\boboz\source\repos\PS_37_Bzahov\PS_37_Bzahov\obj\Debug\netcoreapp3.1\PS_37_Bzahov.genruntimeconfig.cache
+C:\Users\boboz\source\repos\PS_37_Bzahov\PS_37_Bzahov\obj\Debug\netcoreapp3.1\PS_37_Bzahov.csprojAssemblyReference.cache
