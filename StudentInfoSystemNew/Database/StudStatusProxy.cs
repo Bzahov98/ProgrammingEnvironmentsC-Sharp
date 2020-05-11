@@ -8,7 +8,8 @@ namespace StudentInfoSystemNew
 {
     public class StudStatusProxy
     {
-        public int Id, { get; set; }
-    public string StatusDescr { get; set; }
+        public int Id { get; set; }
+        public string StatusDescr { get; set; }
+    }
 }
 

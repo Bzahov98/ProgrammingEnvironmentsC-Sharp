@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Windows;
@@ -22,12 +23,17 @@ namespace StudentInfoSystemNew
             InitializeComponent();
         }
 
-        private void TxtName_TextChanged(object sender, TextChangedEventArgs e)
+        private void btnTestStudents_Click(object sender, RoutedEventArgs e)
         {
-
+            StudentInfoContext studentInfoContext = new StudentInfoContext();
+            if(studentInfoContext.TestStudentsIfEmpty()){
+                MessageBox.Show("В базата няма студенти");
+            }else {
+                MessageBox.Show("В базата има данни за " + studentInfoContext.getTotalStudentsCount() +" на брой студента");
+            }
         }
-
-        private void BtnLoginStudent_Click(object sender, RoutedEventArgs e)
+            
+            private void BtnLoginStudent_Click(object sender, RoutedEventArgs e)
         {
             String username = txtFirstName.Text;
             if (String.IsNullOrEmpty(username))
@@ -36,7 +42,7 @@ namespace StudentInfoSystemNew
                 return;
             }
 
-            String password = txtPassword.Text;
+            String password = txtPassword.Password;
             if (String.IsNullOrEmpty(password))
             {
                 MessageBox.Show("Паролата не може да е празнa");

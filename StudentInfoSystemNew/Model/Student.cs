@@ -30,11 +30,10 @@ namespace StudentInfoSystemNew
         public EducationCource educationCource { get; set; }
         public string stream { get; set; }
         public string group { get; set; }
+        public DateTime? AuthenticationDueDate { get; set; }
+        public DateTime? FinalPaymentDueDate { get; set; }
 
-      /*  public DateTime AuthenticationDueDate { get; set; }
-        public DateTime FinalPaymentDueDate { get; set; }
-*/
-
+        public int StudentId { get; set; }
 
     }
 }

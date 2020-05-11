@@ -6,5 +6,6 @@ namespace StudentInfoSystem
 {
     class StudentTestData
     {
+
     }
 }
