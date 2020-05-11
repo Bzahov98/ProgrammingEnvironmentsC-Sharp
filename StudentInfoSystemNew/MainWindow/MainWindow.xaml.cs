@@ -25,34 +25,39 @@ namespace StudentInfoSystemNew
         //MainWindowVM mwVM;
         private string userFacultNumb;
         private Student currentStudent;
-       //DEbug
+        //DEbug
         public MainWindow()
         {
-            /* string userFn = "123456";
-            */
+
             InitializeComponent();
-            //this.DataContext = this;
-            /* this.userFacultNumb = userFn;
-             this.currentStudent = null;
-             mwVM = new MainWindowVM();
-             this.DataContext = mwVM;
-             LoadUser();*/
+            FillStudStatusChoices();
         }
-        /*public MainWindow( string userFn = "123456")
+        public List<string> StudStatusChoices { get; set; }
+
+        private void FillStudStatusChoices()
         {
-            InitializeComponent();
-            this.currentStudent = null;
-            this.userFacultNumb = userFn;
-            LoadUser();
-        }
-        public MainWindow( Student student)
-        {
-            InitializeComponent();
-            //mwVM = new MainWindowVM();
-            //mwVM.currentStudent = student;
-            //LoadUser(currentStudent); 
-        }*/
-        
+            StudStatusChoices = new List<string>();
+            using (IDbConnection connection = new
+            SqlConnection(Properties.Settings.Default.DbConnect))
+            {
+                string sqlquery =
+                @"SELECT StatusDescr FROM StudStatus";
+                IDbCommand command = new SqlCommand();
+                command.Connection = connection;
+                connection.Open();
+                command.CommandText = sqlquery;
+                IDataReader reader = command.ExecuteReader();
+                bool notEndOfResult;
+                notEndOfResult = reader.Read();
+                while (notEndOfResult)
+
+                {
+                    string s = reader.GetString(0);
+                    StudStatusChoices.Add(s);
+                    notEndOfResult = reader.Read();
+                }
+            }
+            }
 
             private void LoadUser(Student student = null)
         {

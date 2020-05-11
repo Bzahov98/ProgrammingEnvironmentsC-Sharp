@@ -26,8 +26,8 @@ namespace StudentInfoSystemNew.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=Bobo-PC;Initial Catalog=StudentInfoSystemNew;Integrated Security=True" +
-            "")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=Bobo-PC;Initial Catalog=StudentInfoSystemNewer;Integrated Security=Tr" +
+            "ue")]
         public string DbConnect {
             get {
                 return ((string)(this["DbConnect"]));

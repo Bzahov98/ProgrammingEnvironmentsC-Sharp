@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StudentInfoSystemNew.Model
 {
-    class Log
+   public class Log
     {
         public Log() { }
 
@@ -18,7 +18,7 @@ namespace StudentInfoSystemNew.Model
 
         public Log(string activityLine, DateTime logTime, int? userId) : this(activityLine, logTime)
         {
-            UserId = userId;
+            //this.userId = userId;
         }
 
         public string activityLine { get; set; }
@@ -26,7 +26,7 @@ namespace StudentInfoSystemNew.Model
         public DateTime logTime { get; set; }
 
         public int LogId { get; set; }
-        public int? UserId { get; set; }
+        //public int? userId { get; set; }
 
 
     }

@@ -68,19 +68,19 @@ namespace StudentInfoSystemNew
                 currentUserUsername = user.Username;
                 currentUser = user;
                 currentUserRole = user.Role;
-                DateTime lastLogIn = Logger.GetLastLogInInfo(user.Username);
+                /*DateTime lastLogIn = Logger.GetLastLogInInfo(user.Username);
                 TimeSpan differenceFromLastLogIn = DateTime.Now.Subtract(lastLogIn);
                 Console.WriteLine("Успешен Login, Последно си влизал преди "
                     + differenceFromLastLogIn.Days + " Дни, "
                     + differenceFromLastLogIn.Hours + " Часове, "
                     + differenceFromLastLogIn.Minutes + " Минути, "
-                    + differenceFromLastLogIn.Seconds + " Секунди, ");
+                    + differenceFromLastLogIn.Seconds + " Секунди, ");*/
                 Logger.LogActivity("Успешен Login", user);
                 return true;
             }
             else
             {
-                errorMessage = "Потребителят не беше открит";
+                errorMessage = "Потребителят не беше открит, Грешно име или парола";
                 errorFunc(errorMessage);
                 currentUserUsername = username;
                 currentUserRole = UserRoles.ANONYMOUS;

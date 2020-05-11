@@ -25,50 +25,58 @@ namespace StudentInfoSystemNew
 
         private void btnTestStudents_Click(object sender, RoutedEventArgs e)
         {
-            StudentInfoContext context = new StudentInfoContext(); 
-            if (context.TestStudentsIfEmpty()){
+            StudentInfoContext context = new StudentInfoContext();
+            if (context.TestStudentsIfEmpty()) {
                 MessageBox.Show("В базата няма студенти, ще бъдат добавени тестовите");
                 context.CopyTestStudents();
-            }else {
-                MessageBox.Show("В базата има данни за " + context.getTotalStudentsCount() +" на брой студента");
+            } else {
+                MessageBox.Show("В базата има данни за " + context.getTotalStudentsCount() + " на брой студента");
             }
         }
-            
-            private void BtnLoginStudent_Click(object sender, RoutedEventArgs e)
+
+        private void BtnLoginStudent_Click(object sender, RoutedEventArgs e)
         {
-            String username = txtFirstName.Text;
-            if (String.IsNullOrEmpty(username))
-            {
-                MessageBox.Show("Името не може да е празно");
-                return;
-            }
+            /* String username = txtFirstName.Text;
+             if (String.IsNullOrEmpty(username))
+             {
+                 MessageBox.Show("Името не може да е празно");
+                 return;
+             }
 
-            String password = txtPassword.Password;
-            if (String.IsNullOrEmpty(password))
-            {
-                MessageBox.Show("Паролата не може да е празнa");
-                return;
-            }
+             String password = txtPassword.Password;
+             if (String.IsNullOrEmpty(password))
+             {
+                 MessageBox.Show("Паролата не може да е празнa");
+                 return;
+             }
 
-            User user = UserData.IsUserPassCorrect(username, password);
-            if (user == null)
-            {
-                MessageBox.Show("Грешно име или парола");
-                return;
-            }
+             User user = UserData.IsUserPassCorrect(username, password);
+             if (user == null)
+             {
+                 MessageBox.Show("Грешно име или парола");
+                 return;
+             }*/
+
+            LoginValidation loginValidation = new LoginValidation(txtFirstName.Text, txtPassword.Password,DisplayError);
 
             //MainWindow mainForm = new MainWindow(getUserFromData(user.FacNumber));
-            
+            User user = null;
+            loginValidation.ValidateUserInput(ref user);
+            if (user == null) { return; }
             MainWindowVM.studentFromLogin = getUserFromData(user.FacNumber);
             MainWindow mainForm = new MainWindow();
             mainForm.Show();
             this.Close();
-        }
 
+        }
         private Student getUserFromData(string userFacultNumb)
         {
-           // return StudentData.testStudents.Where(student => student.faculityNumber == userFacultNumb).FirstOrDefault();
+            // return StudentData.testStudents.Where(student => student.faculityNumber == userFacultNumb).FirstOrDefault();
             return new StudentInfoContext().Students.Where(student => student.faculityNumber == userFacultNumb).FirstOrDefault();
         }
-    }
+        static void DisplayError(string errorMessage)
+        {
+            MessageBox.Show(errorMessage);
+        }
+    } 
 }

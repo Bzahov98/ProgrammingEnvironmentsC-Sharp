@@ -71,6 +71,16 @@ namespace StudentInfoSystemNew
 
             context.SaveChanges();
         }
+        public void CopyCurrentLogs()
+        {
+            foreach (Log log in Logger.getLogsFromFile())
+            {
+                context.Logs.Add(log);
+            }
+           // Logger.LogActivity("Copy Test Logs" , LoginValidation.currentUser);
+
+            context.SaveChanges();
+        }
 
         public void deleteStudent(string facultNumb) {
             Student delObj =

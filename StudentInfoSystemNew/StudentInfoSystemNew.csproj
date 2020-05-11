@@ -75,11 +75,11 @@
     </Compile>
     <Compile Include="UserLogin\LoginValidation.cs" />
     <Compile Include="Model\Student.cs" />
-    <Compile Include="UserLogin\StudentData.cs" />
+    <Compile Include="Database\StudentData.cs" />
     <Compile Include="Database\StudStatusProxy.cs" />
     <Compile Include="Model\User.cs" />
-    <Compile Include="Model\UserData.cs" />
-    <Compile Include="UserLogin\UserRoles.cs" />
+    <Compile Include="UserLogin\UserData.cs" />
+    <Compile Include="Model\UserRoles.cs" />
     <Page Include="UserLogin\Login.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -116,6 +116,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="app.config" />
     <None Include="App\packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
