@@ -64,7 +64,8 @@
                 <TextBox  x:Name="txtLevel" Text="{Binding currentStudent.educationLevel }" Width="295" Height="24" TextWrapping="Wrap" Grid.Column="1" Grid.Row="2"  TextChanged="TxtName_TextChanged"/>
 
                 <Label x:Name="lblStatus" HorizontalContentAlignment="Center" Content="Статус:" Grid.Column="0" Grid.Row="3"/>
-                <TextBox  x:Name="txtStatus" Text="{Binding currentStudent.educationStatus }" Width="295" Height="24" TextWrapping="Wrap" Grid.Column="1" Grid.Row="3"  TextChanged="TxtName_TextChanged"/>
+                <!--<TextBox  x:Name="txtStatus" Text="{Binding currentStudent.educationStatus }" Width="295" Height="24" TextWrapping="Wrap" Grid.Column="1" Grid.Row="3"  TextChanged="TxtName_TextChanged"/>-->
+                <ComboBox  x:Name="listStatus" ItemsSource="{Binding StudStatusChoices }" Width="295" Height="24" Grid.Column="1" Grid.Row="3"  />
 
                 <Label x:Name="lblFacultyNumber" HorizontalContentAlignment="Center" Content="Фак. номер:" Grid.Column="0" Grid.Row="4"/>
                 <TextBox  x:Name="txtFacultyNumber" Text="{Binding currentStudent.faculityNumber }" Width="295" Height="24" TextWrapping="Wrap" Grid.Column="1" Grid.Row="4"  TextChanged="TxtName_TextChanged"/>

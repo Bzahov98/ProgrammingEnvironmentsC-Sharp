@@ -63,6 +63,7 @@
     <Compile Include="LoginValidation.cs" />
     <Compile Include="Student.cs" />
     <Compile Include="StudentData.cs" />
+    <Compile Include="StudStatusProxy.cs" />
     <Compile Include="User.cs" />
     <Compile Include="UserData.cs" />
     <Compile Include="UserRoles.cs" />

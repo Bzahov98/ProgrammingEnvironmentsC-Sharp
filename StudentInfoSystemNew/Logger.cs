@@ -33,7 +33,7 @@ namespace StudentInfoSystemNew
                 {
                     if (record.Contains(username))
                     {
-                        String[] splitted = record.Split(";");
+                        String[] splitted = record.Split(';');
                         DateTime.TryParse(splitted[0], out resultDateTime);
                     }
                 }

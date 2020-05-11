@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,15 +22,16 @@ namespace StudentInfoSystemNew
     /// </summary>
     public partial class MainWindow : Window
     {
-        MainWindowVM mwVM;
+        //MainWindowVM mwVM;
         private string userFacultNumb;
         private Student currentStudent;
-        //DEbug
+       //DEbug
         public MainWindow()
         {
             /* string userFn = "123456";
             */
             InitializeComponent();
+            //this.DataContext = this;
             /* this.userFacultNumb = userFn;
              this.currentStudent = null;
              mwVM = new MainWindowVM();
@@ -49,8 +52,9 @@ namespace StudentInfoSystemNew
             //mwVM.currentStudent = student;
             //LoadUser(currentStudent); 
         }*/
+        
 
-        private void LoadUser(Student student = null)
+            private void LoadUser(Student student = null)
         {
             if (student == null || student.faculityNumber == null || student.faculityNumber.Length == 0)
             {
@@ -74,7 +78,7 @@ namespace StudentInfoSystemNew
             txtSpeciality.Text = student.specialty;
             txtStream.Text = student.stream;
             txtLevel.Text = student.educationLevel.ToString(); ;
-            txtStatus.Text = student.educationStatus.ToString();
+            //txtStatus.Text = student.educationStatus.ToString();
             txtCourse.Text = student.educationCource.ToString();
         }
 

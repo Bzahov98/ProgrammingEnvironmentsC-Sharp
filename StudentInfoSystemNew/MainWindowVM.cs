@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data;
+using System.Data.SqlClient;
 using System.Text;
 
 namespace StudentInfoSystemNew
@@ -10,9 +12,11 @@ namespace StudentInfoSystemNew
     {
         public static Student studentFromLogin;
        public MainWindowVM() {
+            
             currentStudent = studentFromLogin;
             updateUser();
             activateAllViews();
+            FillStudStatusChoices();
 
         }
         private Student _currentStudent;
@@ -29,7 +33,7 @@ namespace StudentInfoSystemNew
                     _currentStudent.faculity = value.faculity;
                     _currentStudent.specialty = value.specialty;
                     _currentStudent.educationLevel = value.educationLevel;
-                    _currentStudent.educationStatus = value.educationStatus;
+                    //_currentStudent.educationStatus = value.educationStatus;
                     _currentStudent.faculityNumber = value.faculityNumber;
                     
                     _currentStudent.educationCource = value.educationCource;
@@ -53,7 +57,32 @@ namespace StudentInfoSystemNew
         }
 
 
+        public List<string> StudStatusChoices { get; set; }
 
+        private void FillStudStatusChoices()
+        {
+            StudStatusChoices = new List<string>();
+            using (IDbConnection connection = new
+            SqlConnection(Properties.Settings.Default.DbConnect))
+            {
+                string sqlquery =
+                @"SELECT StatusDescr FROM StudStatus";
+                IDbCommand command = new SqlCommand();
+                command.Connection = connection;
+                connection.Open();
+                command.CommandText = sqlquery;
+                IDataReader reader = command.ExecuteReader();
+                bool notEndOfResult;
+                notEndOfResult = reader.Read();
+                while (notEndOfResult)
+
+                {
+                    string s = reader.GetString(0);
+                    StudStatusChoices.Add(s);
+                    notEndOfResult = reader.Read();
+                }
+            }
+        }
         private bool _isEnabled = false;
         public bool isEnabled {
             get => _isEnabled;
