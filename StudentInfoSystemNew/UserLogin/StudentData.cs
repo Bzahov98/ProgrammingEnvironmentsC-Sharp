@@ -7,7 +7,7 @@ namespace StudentInfoSystemNew
     {
 
         private const string Message = "Missing student with that facultet number";
-        public static List<Student> testStudents_ = new List<Student>();
+        private static List<Student> testStudents_ = new List<Student>();
         public static List<Student> testStudents
         {
             get
@@ -19,6 +19,18 @@ namespace StudentInfoSystemNew
         }
 
         public static Student findUserByFacNumber(String facNumb)
+        {
+            Student result = testStudents.Find(user => user.faculityNumber == facNumb);
+            if (result == null)
+            {
+#pragma warning disable CA1303 // Do not pass literals as localized parameters
+                throw new Exception(Message);
+#pragma warning restore CA1303 // Do not pass literals as localized parameters
+            }
+            return result;
+        }
+        
+        public static Student findUserByFacNumberFromDb(String facNumb)
         {
             Student result = testStudents.Find(user => user.faculityNumber == facNumb);
             if (result == null)

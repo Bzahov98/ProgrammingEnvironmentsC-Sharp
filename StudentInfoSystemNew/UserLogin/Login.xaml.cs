@@ -25,11 +25,12 @@ namespace StudentInfoSystemNew
 
         private void btnTestStudents_Click(object sender, RoutedEventArgs e)
         {
-            StudentInfoContext studentInfoContext = new StudentInfoContext();
-            if(studentInfoContext.TestStudentsIfEmpty()){
-                MessageBox.Show("В базата няма студенти");
+            StudentInfoContext context = new StudentInfoContext(); 
+            if (context.TestStudentsIfEmpty()){
+                MessageBox.Show("В базата няма студенти, ще бъдат добавени тестовите");
+                context.CopyTestStudents();
             }else {
-                MessageBox.Show("В базата има данни за " + studentInfoContext.getTotalStudentsCount() +" на брой студента");
+                MessageBox.Show("В базата има данни за " + context.getTotalStudentsCount() +" на брой студента");
             }
         }
             
@@ -66,7 +67,8 @@ namespace StudentInfoSystemNew
 
         private Student getUserFromData(string userFacultNumb)
         {
-            return StudentData.testStudents.Where(student => student.faculityNumber == userFacultNumb).FirstOrDefault();
+           // return StudentData.testStudents.Where(student => student.faculityNumber == userFacultNumb).FirstOrDefault();
+            return new StudentInfoContext().Students.Where(student => student.faculityNumber == userFacultNumb).FirstOrDefault();
         }
     }
 }

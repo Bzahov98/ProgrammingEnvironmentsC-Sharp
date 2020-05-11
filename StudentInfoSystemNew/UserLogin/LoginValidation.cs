@@ -9,6 +9,7 @@ namespace StudentInfoSystemNew
         private string errorMessage;
 
         public static string currentUserUsername { get; private set; }
+        public static  User currentUser { get; private set; }
 
         public static UserRoles currentUserRole { get; private set; }
 
@@ -65,6 +66,7 @@ namespace StudentInfoSystemNew
             if (user != null)
             {
                 currentUserUsername = user.Username;
+                currentUser = user;
                 currentUserRole = user.Role;
                 DateTime lastLogIn = Logger.GetLastLogInInfo(user.Username);
                 TimeSpan differenceFromLastLogIn = DateTime.Now.Subtract(lastLogIn);
@@ -73,7 +75,7 @@ namespace StudentInfoSystemNew
                     + differenceFromLastLogIn.Hours + " Часове, "
                     + differenceFromLastLogIn.Minutes + " Минути, "
                     + differenceFromLastLogIn.Seconds + " Секунди, ");
-                Logger.LogActivity("Успешен Login");
+                Logger.LogActivity("Успешен Login", user);
                 return true;
             }
             else

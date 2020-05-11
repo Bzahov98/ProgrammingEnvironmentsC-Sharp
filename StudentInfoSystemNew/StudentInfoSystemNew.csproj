@@ -68,6 +68,8 @@
     <Compile Include="Database\StudentInfoContext.cs" />
     <Compile Include="Model\EducationEnums.cs" />
     <Compile Include="Logger\Logger.cs" />
+    <Compile Include="Model\Log.cs" />
+    <Compile Include="Settings.cs" />
     <Compile Include="UserLogin\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>

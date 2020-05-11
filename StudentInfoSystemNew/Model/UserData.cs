@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Windows;
 
 namespace StudentInfoSystemNew
 {
@@ -54,6 +55,19 @@ namespace StudentInfoSystemNew
 
         public static User IsUserPassCorrect(string username, string password)
         {
+            StudentInfoContext context = new StudentInfoContext();
+            if (context.TestUsersIfEmpty()) {
+                MessageBox.Show("В базата няма потребители, ще бъдат добавени тестовите");
+                context.CopyTestUsers();
+            }
+            foreach (var user in context.Users )
+                if (user.Username.Equals(username) && user.Password.Equals(password))
+                    return user;
+            return null;    
+        }
+        //Deprecated
+        public static User IsUserPassCorrectLocalData(string username, string password)
+        {
             foreach (var user in TestUsers)
                 if (user.Username.Equals(username) && user.Password.Equals(password))
                     return user;
@@ -62,24 +76,29 @@ namespace StudentInfoSystemNew
 
         public static void SetUserActiveTo(string username, DateTime activeTo)
         {
-            foreach (var user in TestUsers)
+            StudentInfoContext context = new StudentInfoContext();
+            foreach (var user in context.Users)
                 if (user.Username.Equals(username))
                 {
                     user.ActiveTo = activeTo;
-                    Logger.LogActivity("Промяна на активност на " + username);
+                    Logger.LogActivity("Промяна на активност на " + username, user);
                     break;
                 }
+            context.SaveChanges();
         }
 
         public static void AssignUserRole(string username, UserRoles role)
         {
-            foreach (var user in TestUsers)
+            StudentInfoContext context = new StudentInfoContext();
+            foreach (var user in context.Users) { 
                 if (user.Username.Equals(username))
                 {
                     user.Role = role;
-                    Logger.LogActivity("Промяна на роля на " + username);
+                    Logger.LogActivity("Промяна на роля на " + user , user);
                     break;
                 }
+                context.SaveChanges();
+            }
         }
     }
 }

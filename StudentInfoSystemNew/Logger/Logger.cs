@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StudentInfoSystemNew.Model;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
@@ -7,21 +8,34 @@ namespace StudentInfoSystemNew
 {
     public static class Logger
     {
+        public static String logFileName = "log.txt";
         private static List<string> currentSessionActivities = new List<string>();
 
-        public static void LogActivity(string activity)
+        public static void LogActivity(string activity, User user)
         {
-            string activityLine = DateTime.Now + ";"
+            DateTime dateNow = DateTime.Now;
+            string activityLine = dateNow + ";"
                 + LoginValidation.currentUserUsername + ";"
                 + LoginValidation.currentUserRole + ";"
+                + "by " + user.Username + ";"
                 + activity;
             currentSessionActivities.Add(activityLine);
-            if (!File.Exists("log.txt"))
+            logIntoFile(activityLine);
+            logIntoDb  (activityLine,user,dateNow);
+        }
+
+        public static void logIntoFile(String activityLine) {
+            if (!File.Exists(logFileName))
             {
-                File.Create("log.txt");
+                File.Create(logFileName);
             }
-            if (File.Exists("log.txt"))
-                File.AppendAllText("log.txt", activityLine + "\r\n");
+            if (File.Exists(logFileName))
+                File.AppendAllText(logFileName, activityLine + "\r\n");
+        }
+        public static void logIntoDb(String activityLine, User user, DateTime dateNow) {
+            StudentInfoContext context = new StudentInfoContext();
+            context.Logs.Add(new Log(activityLine,dateNow/*,user*/));
+            context.SaveChanges();
         }
 
         public static DateTime GetLastLogInInfo(string username)

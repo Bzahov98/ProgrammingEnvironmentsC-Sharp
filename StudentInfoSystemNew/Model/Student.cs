@@ -4,6 +4,7 @@ namespace StudentInfoSystemNew
 {
     public class Student
     {   
+        public Student() { }
         public Student(string firstName, string middleName, string lastName, string faculity, string specialty, EducationStatus educationStatus, EducationLevel educationLevel, string faculityNumber, EducationCource educationCource, string stream, string group)
         {
             this.firstName = firstName;
